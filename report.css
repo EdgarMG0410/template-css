@@ -1,17 +1,9 @@
-.header-main{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    width: 80%;
-    height: 30vh;
-    margin-top: 2%;
-}
-
 .header-main__title{
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    align-content: center;
     border: 2px solid var(--gray-border);
     padding: 2%;
+    margin-top: 2%;
 }
 .header-main__title > .title{
     grid-column: 1;
@@ -25,6 +17,7 @@
 }
 .header-main__details{
     display: grid;
+
     grid-template-columns: 2fr 4fr 1fr;
     border-bottom: 1px solid var(--gray-border);
 }
@@ -67,4 +60,122 @@
     padding: 5%;
     background-color: var(--light-green);
     color: var(--text-color_secondary);
+}
+
+.grades-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+}
+.grades-container > .skill-box{
+    margin-top: 30px;
+}
+.skill-box > .grade-box{
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+.grade-box > .grade-title{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    justify-content: start;
+}
+.grade-title > .grade-skill{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-column: 1;
+    width: fit-content;
+}
+.grade-title > .grade-skill h1{
+    margin-right: 10px;
+}
+.grade-title > .grade-skill p{
+    width: fit-content;
+    height: 50%;
+    background-color: var(--gray-strong);
+    padding: 5px;
+    color: var(--text-color_secondary);
+    border-radius: 5px;
+}
+.grade-title > .grade-bar{
+    grid-column: 2;
+    height: 60%;
+    width: 98%;
+    border: 1px solid var(--gray-border);
+    background-color: var(--gray);
+    border-radius: 5px;
+}
+.grade-bar > .progress{
+    width: 77%;
+    height: 100%;
+    background-color: var(--light-green);
+}
+.grade-box > .grade-detail{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    border: 1px solid var(--gray-border);
+}
+.skill-box .grade-detail > .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1%;
+    margin-left: 2%;
+}
+.grade-detail > .box{
+    margin-bottom: 1%;
+}
+.grade-detail .box > .progress {
+    display: grid;
+    grid-column: 2;
+    width: 98%;
+    height: 90%;
+    border: 1px solid var(--gray-border);
+    background-color: var(--gray);
+    border-radius: 2px;
+}
+.skill-box:nth-child(1) .grade-detail .box:nth-child(1) > .progress div{
+    width: 75%;
+    background-color: var(--light-green);
+    border-radius: 2px;
+}
+.skill-box:nth-child(1) .grade-detail .box:nth-child(2) > .progress div{
+    width: 100%;
+    background-color: var(--light-green);
+    border-radius: 2px;
+}
+.skill-box:nth-child(1) .grade-detail .box:nth-child(3) > .progress div{
+    width: 80%;
+    background-color: var(--light-green);
+    border-radius: 2px;
+}
+.skill-box:nth-child(1) .grade-detail .box:nth-child(4) > .progress div{
+    width: 60%;
+    background-color: var(--orange);
+    border-radius: 2px;
+}
+.skill-box:nth-child(1) .grade-detail .box:nth-child(5) > .progress div{
+    width: 90%;
+    background-color: var(--light-green);
+    border-radius: 2px;
+}
+
+.skill-box:nth-child(2) .grade-detail .box:nth-child(1) > .progress div{
+    width: 40%;
+    background-color: var(--orange);
+    border-radius: 2px;
+}
+.skill-box:nth-child(2) .grade-detail .box:nth-child(2) > .progress div{
+    width: 30%;
+    background-color: var(--red);
+    border-radius: 2px;
+}
+.skill-box:nth-child(2) .grade-detail .box:nth-child(3) > .progress div{
+    width: 70%;
+    background-color: var(--light-green);
+    border-radius: 2px;
+}
+.skill-box:nth-child(2) .grade-detail .box:nth-child(4) > .progress div{
+    width: 90%;
+    background-color: var(--light-green);
+    border-radius: 2px;
 }
